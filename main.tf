@@ -1,18 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-    }
-  }
-}
-
-provider "aws" {
-  # Configuration options
-  region = var.region
-  // Requires ENV variable AWS_ACCESS_KEY_ID
-  // Requires ENV variable AWS_SECRET_ACCESS_KEY
-}
-
 data "aws_subnet" "vm_subnet" {
   filter {
     name   = "tag:AciPolicyDnTag"
