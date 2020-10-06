@@ -1,5 +1,5 @@
 output "public_ip_address" {
-  value = aws_eip.web.public_ip
+  value = data.aws_eip.web.public_ip
   description = "The public IP address of the VM"
 }
 
